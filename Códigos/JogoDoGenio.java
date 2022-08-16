@@ -19,9 +19,11 @@ public class JogoDoGenio {
                 a = input.nextInt();
             }
         } while (a != n); 
+
+        resp = "Parabéns, você acertou";
             
         System.out.println(resp);
-        System.out.println(n);
+        System.out.println("Eis o número em que pensei: " +n);
 
         input.close();
     }
