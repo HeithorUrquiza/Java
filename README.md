@@ -1,2 +1,2 @@
 # Java
- Exercícios feitos do básico ao avançado em Java
+ Exercícios Java feitos ao longo da minha vida acadêmica
