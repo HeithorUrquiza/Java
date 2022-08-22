@@ -1,4 +1,3 @@
-package IFG;
 import java.util.Scanner;
 
 public class JogoDaVelha {

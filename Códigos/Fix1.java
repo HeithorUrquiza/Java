@@ -1,6 +1,3 @@
-package IFG;
-
-
 import java.util.Locale;
 
 public class Fix1 {
