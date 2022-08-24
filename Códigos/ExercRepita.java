@@ -1,4 +1,3 @@
-package exercicios;
 import javax.swing.JOptionPane;
 
 public class ExercRepita {

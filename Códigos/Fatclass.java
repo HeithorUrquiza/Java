@@ -1,5 +1,3 @@
-package exercicios;
-
 public class Fatclass {
     private int num = 0;
     private int fat = 1;

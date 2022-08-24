@@ -1,5 +1,3 @@
-package exercicios;
-
 public class Fatorial {
     public static void main(String[] args) {
         Fatclass f = new Fatclass();
