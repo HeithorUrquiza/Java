@@ -36,6 +36,13 @@ public class Veiculo {
         return false;
     }
 
+	public boolean checkBateria(int bateria){
+		if(bateria != 1){
+			return false;
+		}
+		return true;
+	}
+
     public String getTipo() {
 		return tipo;
 	}
