@@ -1,4 +1,4 @@
-package IFG_ex;
+package poo;
 
 import java.util.Locale;
 

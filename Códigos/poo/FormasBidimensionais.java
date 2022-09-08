@@ -1,4 +1,4 @@
-package IFG_ex;
+package poo;
 
 public class FormasBidimensionais extends Formas {
     private double area = 0;

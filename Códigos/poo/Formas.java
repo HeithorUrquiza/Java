@@ -1,4 +1,4 @@
-package IFG_ex;
+package poo;
 
 public class Formas {
     
