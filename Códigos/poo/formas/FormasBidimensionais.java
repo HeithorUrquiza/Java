@@ -1,4 +1,4 @@
-package poo;
+package poo.formas;
 
 public class FormasBidimensionais extends Formas {
     private double area = 0;

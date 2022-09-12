@@ -1,4 +1,4 @@
-package poo;
+package poo.formas;
 
 import java.util.Locale;
 
