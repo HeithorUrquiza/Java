@@ -46,5 +46,11 @@ public class Jogador {
 
     public void setReserve(boolean reserve) {
         this.reserve = reserve;
+    }
+
+
+    @Override
+    public String toString() {
+        return "\nNome: " +name+ "Nacionalidade: " +nacionality+ "Posição: " +position+ "Reserva: " +reserve;
     }    
 }

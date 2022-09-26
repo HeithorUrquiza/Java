@@ -1,15 +1,17 @@
 package poo.jornal_desportivo;
 
+import java.util.Arrays;
+
 public class Equipe extends Divisao{
     
     private String name;
-    private Jogador player;
+    private Jogador player[];
     private int wins;
     private int loses;
     private String technician;
 
     
-    public Equipe(String division, String name, Jogador player, int wins, int loses, String technician) {
+    public Equipe(String division, String name, Jogador player[], int wins, int loses, String technician) {
         super(division);
         this.name = name;
         this.player = player;
@@ -27,11 +29,11 @@ public class Equipe extends Divisao{
         this.name = name;
     }
 
-    public Jogador getPlayer() {
+    public Jogador[] getPlayer() {
         return player;
-    }
+    }    
 
-    public void setPlayer(Jogador player) {
+    public void setPlayer(Jogador player[]) {
         this.player = player;
     }
 
@@ -67,4 +69,13 @@ public class Equipe extends Divisao{
     @Override
     public void promotTeam() {   
     }
+
+
+    @Override
+    public String toString() {
+        return "\nEquipe \nNome: " +name+ "Divisão: " +division+ "\nEscalação: " + Arrays.toString(player) + "\nVitórias: " +wins+ 
+        " Derrotas: " +loses;
+    }
+
+    
 }
