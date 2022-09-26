@@ -1,4 +1,4 @@
-package poo.FinalProject;
+package poo.final_project;
 
 public abstract class Pessoa {
     

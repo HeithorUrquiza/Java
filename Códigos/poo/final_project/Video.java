@@ -1,4 +1,4 @@
-package poo.FinalProject;
+package poo.final_project;
 
 public class Video implements AcoesVideo{
 
@@ -32,8 +32,8 @@ public class Video implements AcoesVideo{
 
     public void setEvaluation(int evaluation) {
         int newEva = 0;
-        newEva = (int) (this.getEvaluation() + evaluation)/2;
-        this.evaluation = newEva;
+        newEva = (this.getEvaluation() + evaluation) / this.getViews();
+        this.evaluation = (int) newEva;
     }
 
     public int getViews() {

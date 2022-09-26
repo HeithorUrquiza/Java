@@ -1,4 +1,4 @@
-package poo.FinalProject;
+package poo.final_project;
 
 public class Visualizacao {
     
@@ -11,6 +11,7 @@ public class Visualizacao {
         this.film = film;
         this.viewer.setTotWatched(this.viewer.getTotWatched() + 1);
         this.film.setViews(this.film.getViews() + 1);
+        this.viewer.setExp(0.7);
     }
 
 
@@ -53,11 +54,18 @@ public class Visualizacao {
         this.film.setEvaluation(tot);
     }
 
+    public void addLike(){
+        this.film.setLikes(this.film.getLikes() + 1);
+    }
+
+    public void reprise(){
+        this.film.setViews(this.film.getViews() + 1);
+        this.viewer.setExp(this.viewer.getExp() * 1.2);
+    }
+
 
     @Override
     public String toString() {
         return "\nEspectdor: " +viewer+ "\nFilme/Vídeo: " + film;
-    }
-
-    
+    } 
 }
