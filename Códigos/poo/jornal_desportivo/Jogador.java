@@ -51,6 +51,6 @@ public class Jogador {
 
     @Override
     public String toString() {
-        return "\nNome: " +name+ "Nacionalidade: " +nacionality+ "Posição: " +position+ "Reserva: " +reserve;
+        return "\nNome: " +name+ " | Nacionalidade: " +nacionality+ " | Posição: " +position+ " | Reserva: " +reserve;
     }    
 }

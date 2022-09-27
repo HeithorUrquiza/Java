@@ -1,20 +1,24 @@
 package poo.jornal_desportivo;
 
-public class Jogo extends Campeonato {
+public class Jogo {
 
     private String date;
     private String hour;
     private String locale;
     private String result;
     private String judge;
+    private Equipe visitor;
+    private Equipe fromHome;
+
     
-    public Jogo(String name, String date, String hour, String locale, String judge) {
-        super(name);
+    public Jogo(String date, String hour, String locale, String judge, Equipe visitor, Equipe fromHome) {
         this.date = date;
         this.hour = hour;
         this.locale = locale;
         this.result = null;
         this.judge = judge;
+        this.visitor = visitor;
+        this.fromHome = fromHome;
     }
     
 
@@ -58,6 +62,28 @@ public class Jogo extends Campeonato {
         this.judge = judge;
     }
 
+    public Equipe getVisitor() {
+        return visitor;
+    }
+
+    public void setVisitor(Equipe visitor) {
+        this.visitor = visitor;
+    }
+
+    public Equipe getFromHome() {
+        return fromHome;
+    }
+
+    public void setFromHome(Equipe fromHome) {
+        this.fromHome = fromHome;
+    }
+
+
+    public void scheduleGame(){
+        /*if(){
+
+        }*/
+    }
     
     
 }

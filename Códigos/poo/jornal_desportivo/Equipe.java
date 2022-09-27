@@ -11,12 +11,12 @@ public class Equipe extends Divisao{
     private String technician;
 
     
-    public Equipe(String division, String name, Jogador player[], int wins, int loses, String technician) {
+    public Equipe(String division, String name, Jogador player[], String technician) {
         super(division);
         this.name = name;
         this.player = player;
-        this.wins = wins;
-        this.loses = loses;
+        this.wins = 0;
+        this.loses = 0;
         this.technician = technician;
     }
 
@@ -64,17 +64,23 @@ public class Equipe extends Divisao{
 
     @Override
     public void demoteTeam() { 
+        if(this.getDivision().equals("Primeira divisão")){
+            this.setDivision("Segunda divisão");
+        }
     }
 
     @Override
-    public void promotTeam() {   
+    public void promotTeam() {
+        if(this.getDivision().equals("Segunda divisão")){
+            this.setDivision("Primeira divisão");
+        }
     }
 
 
     @Override
     public String toString() {
-        return "\nEquipe \nNome: " +name+ "Divisão: " +division+ "\nEscalação: " + Arrays.toString(player) + "\nVitórias: " +wins+ 
-        " Derrotas: " +loses;
+        return "\nEquipe \nNome: " +name+ "\nDivisão: " +division+ "\nEscalação: " + Arrays.toString(player) + "\nVitórias: " +wins+ 
+        " | Derrotas: " +loses;
     }
 
     
