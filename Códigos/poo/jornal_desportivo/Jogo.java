@@ -7,8 +7,11 @@ public class Jogo {
     private String locale;
     private String result;
     private String judge;
+    private boolean marked;
     private Equipe visitor;
     private Equipe fromHome;
+    private Equipe winner;
+    private Equipe loser;
 
     
     public Jogo(String date, String hour, String locale, String judge, Equipe visitor, Equipe fromHome) {
@@ -17,8 +20,11 @@ public class Jogo {
         this.locale = locale;
         this.result = null;
         this.judge = judge;
+        this.marked = false;
         this.visitor = visitor;
         this.fromHome = fromHome;
+        this.winner = null;
+        this.loser = null;
     }
     
 
@@ -62,6 +68,14 @@ public class Jogo {
         this.judge = judge;
     }
 
+    public boolean getMarked() {
+        return marked;
+    }
+
+    public void setMarked(boolean marked) {
+        this.marked = marked;
+    }
+
     public Equipe getVisitor() {
         return visitor;
     }
@@ -80,10 +94,28 @@ public class Jogo {
 
 
     public void scheduleGame(){
-        /*if(){
+        if(this.fromHome.getDivision().equals(this.visitor.getDivision())){
+            this.setMarked(true);
+        }
+    }   
 
-        }*/
+    public String showTeams() {
+        return "\n ** Time da Casa ** \n" + fromHome.toString() + "\n ** Time Visitante ** \n" + visitor.toString();
     }
     
-    
+    public String showScore(Equipe winner, int golsW, Equipe loser, int golsL){
+        this.winner.setWins(this.winner.getWins() + 1);
+        this.loser.setLoses(this.loser.getLoses() + 1);
+        return String.format("\n ** Resultado da partida ** \n%s %d x %d %s", winner.getName(), golsW, loser.getName(), golsL);
+    }
+
+    @Override
+    public String toString() {
+        String text = null;
+        if(marked){
+            text = "Data: " + date + " | Hora: " +hour+ " | Local: " +locale+ " | Árbitro: " +judge+ "\nTime de Casa: " +
+            fromHome + " x Time Visitante: " + visitor;
+        }
+        return text;
+    }    
 }
