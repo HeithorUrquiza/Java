@@ -8,9 +8,11 @@ public class Campeonato {
     private Jogo[] game;
 
 
-    public Campeonato(String name) {
+    public Campeonato(String name, Jogo[] game) {
         this.name = name;
+        this.game = game;
     }
+    
 
     public String getName() {
         return name;

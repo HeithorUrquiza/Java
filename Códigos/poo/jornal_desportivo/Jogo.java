@@ -23,8 +23,6 @@ public class Jogo {
         this.marked = false;
         this.visitor = visitor;
         this.fromHome = fromHome;
-        this.winner = null;
-        this.loser = null;
     }
     
 
@@ -92,6 +90,22 @@ public class Jogo {
         this.fromHome = fromHome;
     }
 
+    public Equipe getWinner() {
+        return winner;
+    }
+
+    public void setWinner(Equipe winner) {
+        this.winner = winner;
+    }
+
+    public Equipe getLoser() {
+        return loser;
+    }
+
+    public void setLoser(Equipe loser) {
+        this.loser = loser;
+    }    
+
 
     public void scheduleGame(){
         if(this.fromHome.getDivision().equals(this.visitor.getDivision())){
@@ -100,22 +114,29 @@ public class Jogo {
     }   
 
     public String showTeams() {
-        return "\n ** Time da Casa ** \n" + fromHome.toString() + "\n ** Time Visitante ** \n" + visitor.toString();
+        return "\n ** Time da Casa **" + fromHome.toString() + "\n\n** Time Visitante **" + visitor.toString();
     }
     
     public String showScore(Equipe winner, int golsW, Equipe loser, int golsL){
-        this.winner.setWins(this.winner.getWins() + 1);
-        this.loser.setLoses(this.loser.getLoses() + 1);
-        return String.format("\n ** Resultado da partida ** \n%s %d x %d %s", winner.getName(), golsW, loser.getName(), golsL);
+        String text = null;
+        if(marked){
+            this.setWinner(winner);
+            this.setLoser(loser);
+            this.winner.setWins(this.winner.getWins() + 1);
+            this.loser.setLoses(this.loser.getLoses() + 1);
+            text = "\n-----------------------------" + "\n ** Resultado da partida **\n" + this.winner.getName() + " " + golsW 
+            + " x " + golsL + " " + this.loser.getName() + "\n-----------------------------";
+        }
+        return text;
     }
 
     @Override
     public String toString() {
         String text = null;
         if(marked){
-            text = "Data: " + date + " | Hora: " +hour+ " | Local: " +locale+ " | Árbitro: " +judge+ "\nTime de Casa: " +
-            fromHome + " x Time Visitante: " + visitor;
+            text = "Data: " + date + " | Hora: " +hour+ " | Local: " +locale+ " | Árbitro: " +judge+ 
+            " | Time de Casa: " + fromHome.getName() + " | Time Visitante: " + visitor.getName() + "\n";
         }
         return text;
-    }    
+    }   
 }
