@@ -97,19 +97,19 @@ public class Jogo {
     }    
 
 
-    public void scheduleGame(){
+    public void scheduleGame(){ // Marca um jogo se ambos os times estiverem na mesma divisão
         if(this.fromHome.getDivision().equals(this.visitor.getDivision())){
             this.setMarked(true);
         }
     }   
 
-    public String showTeams() {
+    public String showTeams() { // Exibe todos os dados dos respectivos times
         return "\n ** Time da Casa **" + fromHome.toString() + "\n\n** Time Visitante **" + visitor.toString();
     }
     
-    public String showScore(Equipe winner, int golsW, Equipe loser, int golsL){
+    public String showScore(Equipe winner, int golsW, Equipe loser, int golsL){ // Coleta o time vencedor, perdedor e a quantidade de gols respectivamente
         String text = null;
-        if(marked){
+        if(marked){ // Exibe o plcar caso esse jogo tenha sido aprovado/marcado
             this.setWinner(winner);
             this.setLoser(loser);
             this.winner.setWins(this.winner.getWins() + 1);
@@ -121,7 +121,7 @@ public class Jogo {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // Retona as informações de cada jogo
         String text = null;
         if(marked){
             text = "\nData: " + date + " | Hora: " +hour+ " | Local: " +locale+ " | Árbitro: " +judge+ 

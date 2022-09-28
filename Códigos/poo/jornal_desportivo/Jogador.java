@@ -50,7 +50,7 @@ public class Jogador {
 
 
     @Override
-    public String toString() {
+    public String toString() { // Retorna as informações do jogador
         return "\nNome: " +name+ " | Nacionalidade: " +nacionality+ " | Posição: " +position+ " | Reserva: " +reserve;
     }    
 }

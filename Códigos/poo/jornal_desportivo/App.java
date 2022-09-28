@@ -3,7 +3,7 @@ package poo.jornal_desportivo;
 public class App {
     public static void main(String[] args) {
         
-        Jogador j1[] = new Jogador[14];
+        Jogador j1[] = new Jogador[14]; // Vetor para jogadores 1
         j1[0] = new Jogador("Danny Ward", "País de Gales", "Goleiro", false);
         j1[1] = new Jogador("Wayne Hennessey", "País de Gales", "Goleiro", true);
         j1[2] = new Jogador("Ben Davies", "País de Gales", "Zageiro", false);
@@ -19,7 +19,7 @@ public class App {
         j1[12] = new Jogador("Neco Williams", "País de Gales", "Zagueiro", true);
         j1[13] = new Jogador("Jonatham Williams", "País de Gales", "Volante", true);
 
-        Jogador j2[] = new Jogador[14];
+        Jogador j2[] = new Jogador[14]; // Vetor para jogador 2
         j2[0] = new Jogador("Hugo Lloris", "França", "Goleiro", false);
         j2[1] = new Jogador("Lucas Hernández", "França", "Goleiro", true);
         j2[2] = new Jogador("Jules Koundé", "França", "Zageiro", false);
@@ -35,11 +35,11 @@ public class App {
         j2[12] = new Jogador("Aurélien Tchouaméni","França", "Zagueiro", true);
         j2[13] = new Jogador("Wissam Ben Yedder", "França", "Volante", true);
 
-        Equipe e[] = new Equipe[2];
+        Equipe e[] = new Equipe[2]; // Vetor para equipes
         e[0] = new Equipe("Primeira divisão", "Waller", j1, "Kkami");
         e[1] = new Equipe("Primeira divisão", "France", j2, "Josué");
 
-        Jogo pl[] = new Jogo[3];
+        Jogo pl[] = new Jogo[3]; // Vetor para jogos
         pl[0] = new Jogo("20/04/2023", "18:00", "Lusail Stadium", "Fahad", e[0], e[1]);
         pl[1] = new Jogo("01/05/2023", "19:00", "Al Thumama Stadium", "Hussaim", e[1], e[0]);
         pl[2] = new Jogo("17/05/2023", "20:00", "Stadium 974", "Muhammed", e[0], e[1]);

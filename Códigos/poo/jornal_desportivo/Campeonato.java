@@ -30,7 +30,7 @@ public class Campeonato {
         this.game = game;
     }
 
-    public String rounds() {
+    public String rounds() { // Retorna todos os jogos aprovados/marcados
         return "\nRodadas: " + Arrays.toString(game);
     }
 }

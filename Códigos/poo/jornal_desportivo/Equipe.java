@@ -78,7 +78,7 @@ public class Equipe extends Divisao{
 
 
     @Override
-    public String toString() {
+    public String toString() { // Retorna os dados do time/equipe
         return "\nNome: " +name+ "\nDivisão: " +division+ "\nEscalação: " + Arrays.toString(player) 
         + "\n[Vitórias: " +wins+ " | Derrotas: " +loses + "]";
     }
