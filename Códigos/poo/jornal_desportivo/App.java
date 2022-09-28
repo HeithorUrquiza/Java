@@ -19,7 +19,7 @@ public class App {
         j1[12] = new Jogador("Neco Williams", "País de Gales", "Zagueiro", true);
         j1[13] = new Jogador("Jonatham Williams", "País de Gales", "Volante", true);
 
-        Jogador j2[] = new Jogador[3];
+        Jogador j2[] = new Jogador[14];
         j2[0] = new Jogador("Hugo Lloris", "França", "Goleiro", false);
         j2[1] = new Jogador("Lucas Hernández", "França", "Goleiro", true);
         j2[2] = new Jogador("Jules Koundé", "França", "Zageiro", false);
@@ -35,14 +35,14 @@ public class App {
         j2[12] = new Jogador("Aurélien Tchouaméni","França", "Zagueiro", true);
         j2[13] = new Jogador("Wissam Ben Yedder", "França", "Volante", true);
 
-       Equipe e[] = new Equipe[2];
-       e[1] = new Equipe("Primeira divisão", "Waller", j1, "Kkami");
-       e[2] = new Equipe("Primeira divisão", "France", j2, "Josué");
+        Equipe e[] = new Equipe[2];
+        e[0] = new Equipe("Primeira divisão", "Waller", j1, "Kkami");
+        e[1] = new Equipe("Primeira divisão", "France", j2, "Josué");
 
         Jogo pl[] = new Jogo[3];
-        pl[0] = new Jogo("20/04/2023", "18:00", "Lusail Stadium", "Fahad", e[1], e[2]);
-        pl[1] = new Jogo("01/05/2023", "19:00", "Al Thumama Stadium", "Hussaim", e[2], e[1]);
-        pl[2] = new Jogo("17/05/2023", "20:00", "Stadium 974", "Muhammed", e[1], e[2]);
+        pl[0] = new Jogo("20/04/2023", "18:00", "Lusail Stadium", "Fahad", e[0], e[1]);
+        pl[1] = new Jogo("01/05/2023", "19:00", "Al Thumama Stadium", "Hussaim", e[1], e[0]);
+        pl[2] = new Jogo("17/05/2023", "20:00", "Stadium 974", "Muhammed", e[0], e[1]);
 
         pl[0].scheduleGame();
         pl[1].scheduleGame();
@@ -52,10 +52,11 @@ public class App {
         System.out.println(cp.rounds());
 
         System.out.println(pl[0].showTeams());
-        System.out.println(pl[0].showScore(e[2], 2, e[1], 1));
+        System.out.println(pl[0].showScore(e[1], 2, e[0], 1));
 
-        e[1].demoteTeam();
-        System.out.println(e[1].getDivision());
+        e[0].demoteTeam();
+        System.out.println(e[0].toString());
+        System.out.println(e[1].toString());
         
        
     }

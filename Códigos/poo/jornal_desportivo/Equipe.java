@@ -80,7 +80,7 @@ public class Equipe extends Divisao{
     @Override
     public String toString() {
         return "\nNome: " +name+ "\nDivisão: " +division+ "\nEscalação: " + Arrays.toString(player) 
-        + "\nVitórias: " +wins+ " | Derrotas: " +loses;
+        + "\n[Vitórias: " +wins+ " | Derrotas: " +loses + "]";
     }
 
     

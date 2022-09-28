@@ -114,8 +114,8 @@ public class Jogo {
             this.setLoser(loser);
             this.winner.setWins(this.winner.getWins() + 1);
             this.loser.setLoses(this.loser.getLoses() + 1);
-            text = "\n-----------------------------" + "\n ** Resultado da partida **\n" + this.winner.getName() + " " + golsW 
-            + " x " + golsL + " " + this.loser.getName() + "\n-----------------------------";
+            text = "\n-----------------------------\n" + "         " + this.getDate() + "\n\n ** Resultado da partida **\n" + "    " + 
+            this.winner.getName() + " " + golsW + " x " + golsL + " " + this.loser.getName() + "\n-----------------------------";
         }
         return text;
     }
@@ -124,8 +124,8 @@ public class Jogo {
     public String toString() {
         String text = null;
         if(marked){
-            text = "Data: " + date + " | Hora: " +hour+ " | Local: " +locale+ " | Árbitro: " +judge+ 
-            " | Time de Casa: " + fromHome.getName() + " | Time Visitante: " + visitor.getName() + "\n";
+            text = "\nData: " + date + " | Hora: " +hour+ " | Local: " +locale+ " | Árbitro: " +judge+ 
+            " | Time de Casa: " + fromHome.getName() + " | Time Visitante: " + visitor.getName();
         }
         return text;
     }   
