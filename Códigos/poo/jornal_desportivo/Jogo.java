@@ -5,7 +5,6 @@ public class Jogo {
     private String date;
     private String hour;
     private String locale;
-    private String result;
     private String judge;
     private boolean marked;
     private Equipe visitor;
@@ -18,7 +17,6 @@ public class Jogo {
         this.date = date;
         this.hour = hour;
         this.locale = locale;
-        this.result = null;
         this.judge = judge;
         this.marked = false;
         this.visitor = visitor;
@@ -48,14 +46,6 @@ public class Jogo {
 
     public void setLocale(String locale) {
         this.locale = locale;
-    }
-
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
     }
 
     public String getJudge() {
